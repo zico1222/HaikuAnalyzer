@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require_relative './haiku_analyzer.rb'
 require 'test/unit'
 
@@ -14,7 +15,8 @@ class TestHaikuAnalyzer < Test::Unit::TestCase
       '松島や ああ松島や 松島や',
       '五月雨を集めて早し最上川',
       '梅一輪一輪ほどのあたたかさ',
-      '桐一葉日当たりながら落ちにけり'
+      '桐一葉日当たりながら落ちにけり',
+      'ショックなの君の体が臭いから'
     ]
 
     @not_haiku = [
