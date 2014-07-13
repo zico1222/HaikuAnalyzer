@@ -18,6 +18,7 @@ class TestHaikuAnalyzer < Test::Unit::TestCase
               '桐一葉日当たりながら落ちにけり',
               'ショックなの君の体が臭いから',
               '今夜見たトトロはきっと夢の中',
+              'オーマイガッ何で私が東大に'
              ]
     
     @not_haiku = [

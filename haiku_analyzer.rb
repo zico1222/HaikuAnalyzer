@@ -31,7 +31,7 @@ class HaikuAnalyzer
 
     sections.each_with_index do |section, i|
       next if section.size == syllabic_sound[i]
-      return false unless section.gsub(/((ー|ン|ア|イ|ウ|エ|オ)\z)|/, "").size == syllabic_sound[i]
+      return false unless section.gsub(/((ー|ン|ア|イ|ウ|エ|オ|ッ)\z)|/, "").size == syllabic_sound[i]
     end
 
     sections.size == syllabic_sound.length
