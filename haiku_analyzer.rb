@@ -16,9 +16,11 @@ class HaikuAnalyzer
       next if n.surface.nil?
       word_data = n.feature.split(",")
       current += 1 unless word_data[1].index("助詞") || word_data[1].index("助動詞")
-      phrases[current] = "#{phrases[current]}#{word_data.last}".gsub(/(ァ|ィ|ゥ|ェ|ォ|ャ|ュ|ョ)/, "")
+      word = word_data.last == "*" ? n.surface : word_data.last
+      phrases[current] = "#{phrases[current]}#{word}".gsub(/(ァ|ィ|ゥ|ェ|ォ|ャ|ュ|ョ)/, "")
     end
     phrases.compact!
+    p phrases
 
     current = 0
     phrases.each do |phrase|
